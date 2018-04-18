@@ -130,6 +130,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpendingDatabase\SpendingDatabase.csproj">
+      <Project>{1c3fd16f-77ab-4179-ad2b-59a7078056eb}</Project>
+      <Name>SpendingDatabase</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
