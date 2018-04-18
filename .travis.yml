@@ -1,3 +1,2 @@
 language: csharp
 solution: SpendFixBot/SpendFixBot.sln
-script: SpendFixBot/SpendingDatabase/SpendingDatabase.csproj
