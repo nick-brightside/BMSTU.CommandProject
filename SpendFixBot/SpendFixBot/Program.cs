@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Args;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using DataBaseCon = SpendingDatabase.Program;
 
 namespace SpendFixBot
 {
     class Program
     {
-        private static readonly Telegram.Bot.TelegramBotClient Bot = new TelegramBotClient("570864095:AAEKDDKwjrezNMBm5j2eOvRZQsgTTQRwzBc");
+        private static readonly Telegram.Bot.TelegramBotClient Bot = new TelegramBotClient(SpendFixBot.Config.API_KEY);
 
         static void Main(string[] args)
         {
@@ -68,7 +65,7 @@ namespace SpendFixBot
 
             if (message.Text.StartsWith("/start"))
             {
-                // In this plase will be used API to work with the database(InsertUser) 
+                DataBaseCon.InsertUser((int)message.Chat.Id, message.Chat.FirstName);
                 await Bot.SendTextMessageAsync(message.Chat.Id, $"Привет, {message.Chat.FirstName}" + SpendFixBot.Constants.START_MESSAGE);
             }
             if (message.Text.StartsWith("/delete"))
