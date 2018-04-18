@@ -12,7 +12,7 @@ namespace SpendFixBot
 {
     class Program
     {
-        private static readonly Telegram.Bot.TelegramBotClient Bot = new TelegramBotClient("570864095:AAEKDDKwjrezNMBm5j2eOvRZQsgTTQRwzBc");
+        private static readonly Telegram.Bot.TelegramBotClient Bot = new TelegramBotClient(SpendFixBot.Config.API_KEY);
 
         static void Main(string[] args)
         {
