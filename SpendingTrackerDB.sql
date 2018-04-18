@@ -24,5 +24,5 @@ create table categories
 (
 	category_name varchar(40),
 	spending_id int identity(1, 1) not null, 
-	foreign key (spending_id) references spendings(id)
+	foreign key (spending_id) references spendings(spending_id)
 );
