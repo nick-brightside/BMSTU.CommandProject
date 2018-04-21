@@ -6,7 +6,8 @@ namespace SpendingDatabase
 {
     public class Program
     {
-        private static readonly String CONNECTION_STR = @"Data Source=LAPTOP-DL0OAIPO\SQLEXPRESS;Initial Catalog=SpendingTracker;Integrated Security=True";
+        private static readonly String CONNECTION_STR = @"Data Source=LENOVO-PC;Initial Catalog=SpendingTracker;Integrated Security=True";
+            //"Data Source=LAPTOP-DL0OAIPO\SQLEXPRESS;Initial Catalog=SpendingTracker;Integrated Security=True";
 
         static void Main(string[] args)
         {
