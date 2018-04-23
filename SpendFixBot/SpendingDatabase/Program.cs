@@ -60,5 +60,35 @@ namespace SpendingDatabase
                 }
             }
         }
+
+        static public void InsertSpending(int User_id, double Amount)
+        {
+            using (var connection = new QC.SqlConnection(CONNECTION_STR))
+            {
+                connection.Open();
+                DateTime dt = DateTime.Now;
+                QC.SqlParameter parameter;
+                using (var command = new QC.SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandType = DT.CommandType.Text;
+                    command.CommandText = $@"INSERT INTO [dbo].[spendings] (user_id, amount, dt) VALUES(@User_id, @Amount, @dt);";
+
+                    parameter = new QC.SqlParameter("@User_id", DT.SqlDbType.Int);
+                    parameter.Value = User_id;
+                    command.Parameters.Add(parameter);
+
+                    parameter = new QC.SqlParameter("@Amount", DT.SqlDbType.Float);
+                    parameter.Value = Amount;
+                    command.Parameters.Add(parameter);
+
+                    parameter = new QC.SqlParameter("@dt", DT.SqlDbType.DateTime);
+                    parameter.Value = dt;
+                    command.Parameters.Add(parameter);
+                    QC.SqlDataReader reader = command.ExecuteReader();
+                }
+            }
+        }
+
     }
 }
