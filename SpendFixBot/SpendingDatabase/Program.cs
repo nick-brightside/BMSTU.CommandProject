@@ -38,5 +38,27 @@ namespace SpendingDatabase
                 }
             }
         }
+
+        static public void InsertCategory(int User_id, string Name)
+        {
+            using (var connection = new QC.SqlConnection(CONNECTION_STR))
+            {
+                connection.Open();
+                QC.SqlParameter parameter;
+                using (var command = new QC.SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandType = DT.CommandType.Text;
+                    command.CommandText = $@"INSERT INTO [dbo].[categories] (category_name, spending_id) VALUES(@Name, (select top 1 spending_id from spendings order by id desc));";
+
+                    parameter = new QC.SqlParameter("@Name", DT.SqlDbType.NChar, 50);
+                    parameter.Value = Name;
+                    command.Parameters.Add(parameter);
+
+                    QC.SqlDataReader reader = command.ExecuteReader();
+                    Console.WriteLine("Insert category - OK");
+                }
+            }
+        }
     }
 }
