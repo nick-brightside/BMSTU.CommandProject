@@ -20,5 +20,8 @@ namespace SpendFixBot
         "или /delete если ты хочешь удалить информацию.";
 
         public const string DELETE_DONE = @"Выполнено!";
+        public const string IN_PROGRESS = @"Подожди немного, я начал обрабатывать...";
+        public const string IT_IS_DONE = @"Спасибо! Выполнено! Набери /spending для получения детальной информации о тратах.";
+        public const string FAILED = @"Фотографию не удалось обработать.";
     }
 }

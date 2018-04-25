@@ -90,5 +90,24 @@ namespace SpendingDatabase
             }
         }
 
+        static public void DeleteRows(int User_id)
+        {
+            using (var command = new QC.SqlCommand())
+            {
+                using (var connection = new QC.SqlConnection(CONNECTION_STR))
+                {
+                    connection.Open();
+                    command.Connection = connection;
+                    command.CommandType = DT.CommandType.Text;
+                    command.CommandText =
+                    $@"DELETE FROM [dbo].[categories]
+                       DELETE FROM [dbo].[spendings] WHERE user_id = {User_id} 
+                       DELETE FROM [dbo].[users] WHERE user_id = {User_id};";
+                    QC.SqlDataReader reader = command.ExecuteReader();
+                    Console.WriteLine("Delete - OK");
+                }
+            }
+        }
+
     }
 }
