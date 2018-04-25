@@ -115,8 +115,8 @@
       <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Telegram.Bot, Version=13.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Telegram.Bot.13.2.1\lib\netstandard1.1\Telegram.Bot.dll</HintPath>
+    <Reference Include="Telegram.Bot, Version=13.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Telegram.Bot.13.4.0\lib\net45\Telegram.Bot.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -134,6 +134,10 @@
     <ProjectReference Include="..\SpendingDatabase\SpendingDatabase.csproj">
       <Project>{1c3fd16f-77ab-4179-ad2b-59a7078056eb}</Project>
       <Name>SpendingDatabase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TextDetection\TextDetection.csproj">
+      <Project>{15740795-cae2-412e-81de-6ba15721c460}</Project>
+      <Name>TextDetection</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
