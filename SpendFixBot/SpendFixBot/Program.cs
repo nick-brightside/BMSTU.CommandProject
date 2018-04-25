@@ -17,7 +17,9 @@ namespace SpendFixBot
     class Program
     {
         private static readonly Telegram.Bot.TelegramBotClient Bot = new TelegramBotClient(SpendFixBot.Config.API_KEY);
-
+        /*
+         * main
+         */
         static void Main(string[] args)
         {
             Bot.OnMessage += BotOnMessageReceived;
