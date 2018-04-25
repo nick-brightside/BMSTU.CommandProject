@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpendingDatabase", "Spendin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextDetection", "TextDetection\TextDetection.csproj", "{15740795-CAE2-412E-81DE-6BA15721C460}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestOfSpendFixBot", "UnitTestOfSpendFixBot\UnitTestOfSpendFixBot.csproj", "{21A18E04-C02C-4A63-B501-53859BB212DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{15740795-CAE2-412E-81DE-6BA15721C460}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15740795-CAE2-412E-81DE-6BA15721C460}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15740795-CAE2-412E-81DE-6BA15721C460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A18E04-C02C-4A63-B501-53859BB212DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A18E04-C02C-4A63-B501-53859BB212DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A18E04-C02C-4A63-B501-53859BB212DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A18E04-C02C-4A63-B501-53859BB212DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
