@@ -14,6 +14,10 @@ using DataBaseCon = SpendingDatabase.Program;
 
 namespace SpendFixBot
 {
+    /*
+     * authors Aleks, Nikita
+     * 
+     */
     class Program
     {
         private static readonly Telegram.Bot.TelegramBotClient Bot = new TelegramBotClient(SpendFixBot.Config.API_KEY);
